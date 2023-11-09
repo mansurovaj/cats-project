@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>у меня лапки</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/itc-slider.css">
+	<link rel="stylesheet" type="text/css" href="css/accordion.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body>
+		<header class="header">
+		<div class="container">
+			<nav class="nav">
+				<h2 class="logo">котики</h2>
+				<ul class="nav__list">
+					<li class="nav__item"><a class="nav__link" href="#">главная</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">о нас</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">каталог</a></li>
+					<li class="nav__item"><a class="nav__link" href="#">акции</a></li>
+					
+				</ul>
+				<div class="burger" onclick="burgerClick()">
+					<div class="burger__line burger__line_1"></div>
+					<div class="burger__line burger__line_2"></div>
+					<div class="burger__line burger__line_3" ></div>
+				</div>
+			</nav>
+			<button id="btn-menu" class="btn-menu">менюшка</button>
+			<div id="menu" class="header__menu">	
+				<ul class="menu__list">
+<li class="menu__item"><a href="#">главная</a></li>
+<li class="menu__item"><a href="#">о нас</a></li>				
+<li class="menu__item"><a href="#">заказать</a></li>				
+				
+				<li class="menu__item">
+						<div class="theme">
+							<h4 class="theme__title">тема сайта</h4>
+							<ul class="theme__list">
+								<li class="theme__item">
+									<div class="theme__dark" onclick="choiceDark()">
+									
+								    </div>
+							</li>
+								<li class="theme__item">
+								<div class="theme__light" onclick="choiceLight()"></div>
+							</li>
+							</ul>
+						</div>
+					</li>
+			</ul>
+			</div>
+		</div>
+		</header>
+	<main class="main">
+		<section class="video">
+			<video class="myVideo" id="myVideo" autoplay muted>
+				<source src="video/video1.mp4" type="video/mp4">
+			</video>
+			<div class="video__content">
+				<div class="container">
+					<h2 class="video__title">котики хорошие</h2>
+					<p class="video__text">лишнего не скажут</p>
+					<button class="video__btn" id="mute"
+					onclick="play()">pause</button>
+					<button class="video__btn" id="mute"
+					onclick="mute()">On</button>
+					<button class="video__btn"
+					onclick="next()">next</button>
+					<button class="video__btn" onclick="prev()">prev
+					</button>
+
+
+				</div>
+			</div>
+		</section>
+	<section class="shop">
+		<div class="container">
+			<h1 class="shop__title">хорошее настроение</h1>
+			<div class="itc-slider" data-slider="itc-slider" data-autoplay="true" data-interval="2000">
+				<div class="itc-slider__wrapper">
+					<div class="itc-slider__items">
+						<div class="itc-slider__item">
+							<img class="shop__img" src="img/shop.jpg">
+						</div>
+						<div class="itc-slider__item">
+							<img class="shop__img" src="img/tov1.jpg">
+						</div>
+						<div class="itc-slider__item">
+							<img class="shop__img" src="img/tov2.jpg">
+						</div>
+						<div class="itc-slider__item">
+							<img class="shop__img" src="img/tov3.jpg">
+						</div>
+						<div class="itc-slider__item">
+							<img class="shop__img" src="img/tov4.jpg">
+						</div>
+					</div>
+				</div>
+				<button class="itc-slider__btn itc-slider__btn_prev"></button>
+				<button class="itc-slider__btn itc-slider__btn_next"></button>
+			</div>
+			<div class="accordion" id="accordion-1">
+				<div class="accordion__item">
+					<h2 class="accordion__header">о нас</h2>
+					<div class="accordion__body">
+						<p class="shop__text">мы дарим хорошее настроение и вообще мы крутые</p>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<h2 class="accordion__header">цена</h2>
+					<div class="accordion__body">
+						<p class="shop__price">100 000 p</p>
+						<button class="shop__btn" id="btn" onclick="buy()">заказать</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<section class="clock">
+			<div class="container container_clock">
+				<p class="time"></p>
+			</div>
+		</section>
+	</section>
+	<section class="maps">	
+		<div class="container">
+			<h2 class="maps__title">искать нас</h2>
+			<div class="yandex">
+				<h3 class="yandex__map">яндекс карта</h3>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6c116934bf49e0cd8ce70ae7621b8de427e5e9bc85497f2a2581cc128921f66&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+			</div>
+		</div>
+	</section>
+
+		<button class="basket" id="basket">
+			<img src="img/basket.png" alt="" class="basket__img">
+			<p class="price">0</p>
+		</button>
+	</main>
+<footer class="footer">
+	<div class="footer__content">
+		<p class="footer__text">самый лучший магазин</p>
+		<p class="footer__contacts">мир обнимашкек</p>
+	</div>
+</footer>
+
+	<script type="text/javascript" src="script/index.js"></script>
+	<script type="text/javascript" src="script/itc-slider.js"></script>
+	<script type="text/javascript" src="script/menu.js"></script>
+	<script type="text/javascript" src="script/accordion.js"></script>
+	<script type="text/javascript" src="script/theme.js"></script>
+	<script type="text/javascript" src="script/burger.js"></script>
+	<script type="text/javascript" src="script/time.js"></script>
+	<script type="text/javascript" src="script/video.js"></script>
+</body>
+</html>

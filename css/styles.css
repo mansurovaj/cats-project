@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poltawski+Nowy&family=Reenie+Beanie&display=swap');
+*{
+	font-family: 'Playfair Display', serif;
+	font-family: 'Poltawski Nowy', serif;
+	font-family: 'Reenie Beanie', cursive;
+
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.itc-slider{
+	width: 100%;
+}
+.shop__img{
+	width: 100%;
+	height: 100%;
+}
+.header{
+background-color:#eb99ff
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo{
+	color: #760cc7;
+	font-size: 50px;
+	font-weight: bold;
+}
+.nav__list{
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	width: 60%;
+}
+.nav__link{
+	text-decoration: none;
+	font-size: 25px;
+	color: #000000;
+}
+.footer{
+
+}
+.header__menu{
+	position: absolute;
+	z-index: 1;
+	background-color: #f59af2;
+	
+	display: none;
+	justify-content: center;
+	text-align: center;
+}
+.menu__list{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items:center ;
+	justify-content: space-evenly;
+	padding: 5px;
+}
+.theme__list{
+	column-gap: 10px;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.theme__dark{
+	width: 20px;
+	height: 20px;
+	background-color:#000 ;
+	border-radius: 100px;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+.theme__light{
+	width: 20px;
+	height: 20px;
+	background-color:#e1a1ff ;
+	border-radius: 100px;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+.is-active{
+	display: flex;
+}
+.maps__title{
+	background-color: #d862fb;
+	height: 30px;
+	width: 130px;
+	line-height: 26px;
+	text-align: center;
+	border-radius: 30px;
+}
+.accordion__item{
+	background-color:#ebacfe ;
+}
+.accordion{
+	background-color:#ebacfe ;
+}
+.shop__title{
+
+	padding: 20px 0px 20px 0px;
+	background-color: #ebacfe;
+	height: 40px;
+	width: 300px;
+	line-height: 26px;
+	text-align: center;
+	border-radius: 30px;
+}
+.footer{
+	background-color: #ebacfe;
+}
+.container_footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer__text{
+	font-size: 25px;
+	color:#7e099c ;
+}
+.footer__contacts{
+	font-size: 25px;
+	color: #7e099c;
+}
+.burger{
+
+	display: none;
+	cursor: pointer;
+}
+.burger__line{
+	width: 50px;
+	height: 7px;
+	background-color: white;
+	margin: 10px;
+	transition: all 0.5s ease;
+
+}
+.time{
+	background-color: #d862fb;
+	height: 50px;
+	width: 130px;
+	line-height: 30px;
+	border-radius: 30px;
+	font-size: 25px;
+}
+
+@keyframes navLinkAnim{
+	from{
+		opacity: 0;
+		transform: translateX(10%);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+@media screen and (max-width:1000px){
+	body{
+	overflow-x: hidden;
+}
+
+	.nav__list{
+		display: flex;
+		flex-direction: column;
+		background-color: #b211d6;
+		position: absolute;
+		right: 0px;
+		height: 40vh;
+		top: 150px;
+		z-index: 2;
+		align-items: center;
+		transform: translateX(100%);
+		transition: transform 0.8s ease-in;
+
+	}
+	.nav__list_active{
+		transform: translateX(0%);
+	}
+	.container{
+		max-width: 600px;
+	}
+	.burger{
+		display: block;
+	}
+	.active .burger__line_1{
+		transform: rotate(45deg) translate(-5px, 17px);
+	}
+	.active .burger__line_2{
+		opacity: 0;
+	}
+	.active .burger__line_3{
+		transform: rotate(-45deg) translate(6px, -29px);
+	}
+	.nav__link{
+		opacity: 0;
+	}
+}
+
+#myVideo{
+	width: 100%;
+}
+.video{
+	position: relative;
+}
+.video__content{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.5);
+}
+.video__btn{
+	width: 200px;
+	font-size: 18px;
+	padding: 5px 15px;
+	border: no;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+    transition: 0.3 ease-in;
+
+}
+.video__btn:hover{
+	background-color: white;
+	color: black;
+}
+.basket{
+	position: fixed;
+	top: 90px;
+	left: 50px;
+	width: 70px;
+	height: 70px;
+	padding: 15px 25px;
+	border-radius:10px;
+	border: 1px solid black;
+	cursor: pointer;
+
+}
+.basket__img{
+	width: 80%;
+}
+.price{
+	margin: 0;
+	text-align: center;
+}
